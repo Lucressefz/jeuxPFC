@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre Feuille Ciseaux</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasard Game</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header>
+        <h1>Pierre Feuille Ciseaux</h1>
+    </header>
+
+    <main>
+        <section class="game">
+            <p class="instruction">Faites votre choix pour lancer le jeux!</p>
+            <div class="choices">
+                <button class="choice" data-choice="pierre">
+                    <img src="assets/fonts/rock1.png" alt="Pierre" class="choice-image">
+                    ✊🏾 Pierre
+                </button>
+                <button class="choice" data-choice="feuille">
+                    <img src="assets/fonts/feuille1.png" alt="Feuille" class="choice-image">
+                    📃 Feuille
+                </button>
+                <button class="choice" data-choice="ciseaux">
+                    <img src="assets/fonts/scissors2.png" alt="Ciseaux" class="choice-image">
+                    ✂️ Ciseaux
+                </button>
+            </div>
+            <div class="results">
+                <p>Votre choix : <span id="player-choice">-</span></p>
+                <p>Choix de l'ordinateur : <span id="computer-choice">-</span></p>
+                <p>Résultat : <span id="result">-</span></p>
+            </div>
+        </section>
+
+        <section class="scoreboard">
+            <p>Score Joueur : <span id="player-score">0</span></p>
+            <p>Score Ordinateur : <span id="computer-score">0</span></p>
+            <p>Score Total : <span id="score">0</span></p>
+            <button id="reset">Réinitialiser</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Lucresse Zeufack</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
