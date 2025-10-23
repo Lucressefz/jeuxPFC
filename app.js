@@ -1,4 +1,4 @@
-// Sélection des éléments HTML
+// Sélection des éléments
 const playerChoiceSpan = document.getElementById("player-choice");
 const computerChoiceSpan = document.getElementById("computer-choice");
 const resultSpan = document.getElementById("result");
@@ -44,7 +44,7 @@ function updateScores(result) {
     }
     totalScore = playerScore - computerScore;
 
-    // Mise à jour des scores dans le DOM
+    // Mise à jour des scores 
     playerScoreSpan.textContent = playerScore;
     computerScoreSpan.textContent = computerScore;
     totalScoreSpan.textContent = totalScore;
@@ -56,7 +56,7 @@ function handlePlayerChoice(event) {
     const computerChoice = getComputerChoice();
     const result = getResult(playerChoice, computerChoice);
 
-    // Mise à jour des choix et du résultat dans le DOM
+    // Mise à jour des choix et du résultat 
     playerChoiceSpan.textContent = playerChoice;
     computerChoiceSpan.textContent = computerChoice;
     resultSpan.textContent = result;
@@ -70,20 +70,4 @@ choicesButtons.forEach(button => {
     button.addEventListener("click", handlePlayerChoice);
 });
 
-// Fonction pour réinitialiser la partie
-function resetGame() {
-    playerScore = 0;
-    computerScore = 0;
-    totalScore = 0;
 
-    // Réinitialisation des scores et du texte dans le DOM
-    playerScoreSpan.textContent = "0";
-    computerScoreSpan.textContent = "0";
-    totalScoreSpan.textContent = "0";
-    playerChoiceSpan.textContent = "-";
-    computerChoiceSpan.textContent = "-";
-    resultSpan.textContent = "-";
-}
-
-// Ajout de l'écouteur d'événement sur le bouton de réinitialisation
-resetButton.addEventListener("click", resetGame);
